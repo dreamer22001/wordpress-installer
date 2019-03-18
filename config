@@ -1,0 +1,13 @@
+NOME_PROJETO="teste_a"
+CAMINHO_DIRETORIO_PROJETO="/var/www/html"
+DBNAME='teste_a'
+DBUSER='root'
+DBPASS='root'
+DBHOST='localhost'
+DBPREFIX='wp_'
+URL='localhost/teste_a'
+TITLE='teste_a'
+ADMIN_USER='admin'
+ADMIN_PASSWORD='admin@dev'
+ADMIN_EMAIL='michael@paprica.ag'
+GIT_URL='https://michael_liang@bitbucket.org/paprica/conquista.git'
