@@ -12,7 +12,6 @@ wp --info 2> /dev/null >/dev/null
 EXIST_WP_CLI=`echo $?`
 
 bash install_wordpress.sh
-# cd ${CAMINHO_PROJETO}/wp-content/themes/
 mkdir ${CAMINHO_PROJETO}/wp-content/themes/${NOME_PROJETO}
 git clone ${GIT_URL} ${CAMINHO_PROJETO}/wp-content/themes/${NOME_PROJETO}
 cd ${CAMINHO_PROJETO}

@@ -18,11 +18,7 @@ if [[ $EXIST_WP_CLI != 0 ]]; then
     bash install_wp_cli.sh
     mkdir ${CAMINHO_PROJETO}
     wp core download --path=${CAMINHO_PROJETO} --locale=pt_BR
-    rm -rf ${CAMINHO_PROJETO}/license.txt ${CAMINHO_PROJETO}/wp-config-sample.php ${CAMINHO_PROJETO}/readme.html
-    rm -rf ${CAMINHO_PROJETO}/wp-content/themes/*
-    rm -rf ${CAMINHO_PROJETO}/wp-content/plugins/*
-    rm -rf ${CAMINHO_PROJETO}/wp-content/languages/plugins/*
-    rm -rf ${CAMINHO_PROJETO}/wp-content/languages/themes/*
+    bash ../utils/remove_base_file.sh
     cd ${CAMINHO_PROJETO}
     wp config create --dbname=${DBNAME} --dbuser=${DBUSER} --dbpass=${DBPASS} --dbhost=${DBHOST} --dbprefix=${DBPREFIX}
     wp db create
@@ -32,11 +28,7 @@ else
     if [[ ! -d ${CAMINHO_PROJETO} ]]; then
         mkdir ${CAMINHO_PROJETO}
         wp core download --path=${CAMINHO_PROJETO} --locale=pt_BR
-        rm -rf ${CAMINHO_PROJETO}/license.txt ${CAMINHO_PROJETO}/wp-config-sample.php ${CAMINHO_PROJETO}/readme.html
-        rm -rf ${CAMINHO_PROJETO}/wp-content/themes/*
-        rm -rf ${CAMINHO_PROJETO}/wp-content/plugins/*
-        rm -rf ${CAMINHO_PROJETO}/wp-content/languages/plugins/*
-        rm -rf ${CAMINHO_PROJETO}/wp-content/languages/themes/*
+        bash ../utils/remove_base_file.sh
         cd ${CAMINHO_PROJETO}
         wp config create --dbname=${DBNAME} --dbuser=${DBUSER} --dbpass=${DBPASS} --dbhost=${DBHOST} --dbprefix=${DBPREFIX}
         wp db create
