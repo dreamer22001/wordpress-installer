@@ -9,7 +9,6 @@ bash ./utils/check-req.sh
 REQ=$?
 
 if [ $REQ == 0 ]; then
-    echo "Numero de argumentos: $#"
     if [ $# -ge 1 ]; then
         COUNT=0
         for ARG in $*; do
@@ -26,17 +25,18 @@ if [ $REQ == 0 ]; then
                 "theme")
                     printf "${PURPLE}** INSTALAR TEMA \n${NC}"
                     bash ./installers/install_theme.sh
-                ;;        
-                "all")
-                    bash ./installers/install_wp_cli.sh&&bash ./installers/install_wordpess.sh&&bash ./installers/install_theme.sh
                 ;;
+                "config")
+                    printf "${PURPLE}** CRIAR CONFIG \n${NC}"
+                    bash ./utils/create-config-file.sh
+                ;;         
                 *)
-                    echo "default"
+                    bash ./utils/help.sh
                 ;;
             esac
         done
     else
-        echo "dasd"
+        bash ./utils/help.sh
     fi
 fi
 

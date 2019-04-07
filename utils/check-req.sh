@@ -17,7 +17,7 @@ fi
 type mysql 2> /dev/null >/dev/null
 EXIST_MYSQL=$? 
 
-# VALIDA SE PHP EXISTE
+# VALIDA SE MYSQL EXISTE
 if [ $EXIST_MYSQL != 0 ]; then
     printf "${RED}** MYSQL NÃO ENCONTRADO\n"
     exit 1
@@ -26,7 +26,7 @@ fi
 type git 2> /dev/null >/dev/null
 EXIST_GIT=$? 
 
-# VALIDA SE PHP EXISTE
+# VALIDA SE GIT EXISTE
 if [ $EXIST_GIT != 0 ]; then
     printf "${RED}** GIT NÃO ENCONTRADO\n"
     exit 1
@@ -36,7 +36,7 @@ php -m | grep mysqli 2> /dev/null >/dev/null
 
 EXIST_PHPMYSQL=$? 
 
-# VALIDA SE PHP EXISTE
+# VALIDA SE PHPMYSQLI EXISTE
 if [ $EXIST_PHPMYSQL != 0 ]; then
     printf "${RED}** PHP MYSQLI NÃO ENCONTRADO\n"
     exit 1

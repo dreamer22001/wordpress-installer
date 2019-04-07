@@ -42,4 +42,6 @@ if [ -f "$CONFIG_PATH" ]; then
             printf "${RED}** WORDPRESS JÁ INSTALADO COM SUCESSO\n"
         fi
     fi
+else 
+    printf "${RED}** Arquivo de configuração não encontrado.\n"
 fi
