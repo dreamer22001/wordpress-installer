@@ -10,7 +10,7 @@ CONFIG_PATH="$MY_PATH/../"config
 function make_questions () {
     printf "$1"
     read INPUT
-    echo "$2=/'$INPUT/'" >> $CONFIG_PATH
+    echo "$2='$INPUT'" >> $CONFIG_PATH
 }
 
 

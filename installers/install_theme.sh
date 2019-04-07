@@ -5,7 +5,6 @@ BLUE='\033[0;34m'
 PURPLE='\033[0;35m'
 NC='\033[0m' # No Color
 MY_PATH="`dirname \"$0\"`"
-echo $MY_PATH
 CONFIG_PATH="$MY_PATH/../config"
 
 if [ -f "$CONFIG_PATH" ]; then
@@ -21,7 +20,9 @@ if [ -f "$CONFIG_PATH" ]; then
     cd ${CAMINHO_PROJETO}
     theme=`wp theme list --field=name`
     wp theme activate ${theme}
-    printf "${red}** instalando tema\n"
+    printf "${RED}** instalando tema\n"
+else 
+    printf "${RED}** Arquivo de configuração não encontrado.\n"
 fi
 
 
